@@ -21,6 +21,8 @@
     }
     #content{
         background-color: orange;
+        padding:2px;
+        margin:2px;
     }
     #distinictionMark{
      color:darkred;
@@ -40,10 +42,22 @@
         color:red;
         font-weight: bolder;
     }
+    .button {
+  background-color: #ED9121;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
     </style>
 <body>
 <div id="AllContainer">
-<h1 style='background-color:#ED9121; color: white'>ICT1512 Year Mark and Exam Calculator</h1>
+<h1 style='background-color:#ED9121; color: white'>ICT1512 Year and Exam Mark Calculator</h1>
 <div style="border:1 black thin; background-color: #FF9F00; font-size: 1.2em">
 <p>The following formula is used to calculate   year mark:<br/>
 [Assignment 1 * 0.16] + [Assignment 2 * 0.17] + [Assignment 3 * 0.17] + [Assignment 4 * 0.5] = Year  <br/>
@@ -78,7 +92,7 @@ All input is supposed to be percentages you got in the assignments.
 <br/>
 <p id="finalMark"></p>
 <p id="decision"></p>
-<input type="button" value="Compute" id="computer" onclick="compute()"/>
+<input type="button" value="Compute" id="computer" onclick="compute()" class="button"/>
 </form>
 </div>
 <div id="final" style="background-color: beige;">
