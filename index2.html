@@ -170,66 +170,24 @@ function compute(){
 
     sum=s1*s1W+s2*s2W+s3*s3W+s4*s4W+s5*s5W+s6*s6W+s7*s7W; //computer final mark
 
-    var requiredToPass=checkPass(sum * yW);
 
     yearkMark.innerHTML="Your FINAL Mark : <em class='emphasis'>"+ sum.toFixed(0) +"%</em>"; //display final mark
     
-     //to pass you need to obtain 50% in the exam.
-    document.getElementById("requiredMark").innerHTML= "Based on  Mark to pass you need to obtain : <em class='emphasis'>"+requiredToPass.toFixed(0)+"%</em> in the final exam.";
-    
     //check for distinction
-    var distcheck=distinctionCheck(sum * yW);
+    var distcheck=distinctionCheck(sum);
      
-     if(distcheck>100){
-         document.getElementById("distinictionMark").innerHTML= "Sorry you can't get a distinction <em class='emphasis'>"+sum.toFixed(0) +"%</em>";
-     }
-    else{
+     if(distcheck>=75){
     //to pass you need a distinction you need x% in the exam.
-    document.getElementById("distinictionMark").innerHTML= "To obtain a distinction aim for <em class='emphasis'>"+distinctionCheck(sum * yW).toFixed(0)+"% </em>in the final exam.";
+    document.getElementById("distinictionMark").innerHTML= "CONGRATUTIONS YOU PASSED WITH A DISTINCTION!!!.";
     }
 
-    //after final mark after actual exam mark is entered
-     document.getElementById("finalMark").innerHTML= "Final Mark is "+finalMark.toFixed(0)+"%";
-     //after final mark after actual exam mark is entered
-     document.getElementById("decision").innerHTML= checkDesision(finalMark,exam);
-
-}
-function checkPass(yearMark){
-
-  var i=(100 - yearMark)
-
-  var percentage=(i/100) *100;
-
-    if(percentage<=50){
-        return 50;
-    }
-  return percentage;
 }
 function distinctionCheck(yearMark){
-  var i=75 - yearMark;
- var percentage=(i/100) *100;
-    if(percentage>=50){
+    if(percentage>=75){
         return percentage;
     }
     else
         return 0;
-}
-function checkDesision(finalMark, examMark){
-    var msg="";
-
-    if(examMark<50){
-        msg="Sorry you have failed the module because your mark is less than 50%. No supplementary";
-    }
-    else if(finalMark>=75){
-      msg="Yes!!! You got a distinction!! "+finalMark.toFixed(0)+"%";     
-    }
-    else if(finalMark>=50 && examMark>40){ //pass only if the final mark is greater than 50 and exam mark is at least 40
-      msg="Congratulations!!... It's a pass "+finalMark.toFixed(0)+"%";  
-    }
-    else
-        msg="";
-return msg;
-
 }
 function createEvents(){
     assign1.addEventListener("change",compute,false);
