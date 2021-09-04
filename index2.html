@@ -127,7 +127,7 @@
 </div>
         </div>
 <script>
-    
+document.getElementById("distinictionMark").innerHTML="";    
 document.addEventListener("load",createEvents,false);
 
 var assign1=document.getElementById("assign1");
@@ -180,14 +180,19 @@ function compute(){
     //to pass you need a distinction you need x% in the exam.
     document.getElementById("distinictionMark").innerHTML= "CONGRATUTIONS YOU PASSED WITH A DISTINCTION!!!.";
     }
-
+    else if(distcheck>=50 && distcheck<75){
+        document.getElementById("distinictionMark").innerHTML= "CONGRATUTIONS YOU PASSED THE MODULE!!!."; 
+    }
+    else{
+         document.getElementById("distinictionMark").innerHTML= "FAILED REPEAT THE MODULE!!!."; 
+    }
 }
 function distinctionCheck(mark){
     if(mark>=75){
         return mark;
     }
     else
-        return 0;
+        return mark;
 }
 function createEvents(){
     assign1.addEventListener("change",compute,false);
