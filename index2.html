@@ -168,7 +168,7 @@ function compute(){
 
     var exam=examMark.value==""?0:parseInt(examMark.value);
 
-    sum=s1*s1W+s2*s2W+s3*s3W+s4*s4W+s5*s5W+s6*s6W+s7*s7W; //computer final mark
+    sum=s1*s1W + s2*s2W + s3*s3W + s4*s4W + s5*s5W + s6*s6W + s7*s7W; //computer final mark
 
 
     yearkMark.innerHTML="Your FINAL Mark : <em class='emphasis'>"+ sum.toFixed(0) +"%</em>"; //display final mark
@@ -182,9 +182,9 @@ function compute(){
     }
 
 }
-function distinctionCheck(yearMark){
-    if(percentage>=75){
-        return percentage;
+function distinctionCheck(mark){
+    if(mark>=75){
+        return mark;
     }
     else
         return 0;
