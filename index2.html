@@ -108,10 +108,6 @@
 <p id="yearMark"></p>
 <p id="requiredMark"></p>
 <p id="distinictionMark"></p>
-<label for="examMark"> Examination Mark (70%):
-    <input type="number" name="examMark" id="examMark" size="30" min="0" max="100" value="0" onchange="compute()"/>
-</label>
-<br/>
 <p id="finalMark"></p>
 <p id="decision"></p>
 <input type="button" value="Calculate" id="computer" onclick="compute()" class="button"/>
@@ -139,7 +135,6 @@ var assign2=document.getElementById("assign5");
 var assign3=document.getElementById("assign6");
 var assign4=document.getElementById("assign7");   
     
-var examMark=document.getElementById("examMark");
 var yearkMark=document.getElementById("yearMark");
 
 
@@ -151,8 +146,6 @@ var s4W=0.10; //ass 4 weight
 var s5W=0.06; //assignment 5 weight
 var s6W=0.10; //ass 6 weight
 var s7W=0.50; //ass 5 weight
-var examW=0.7;
-var yW=1.0;
 
 function compute(){
     var s1=assign1.value==""?0:parseInt(assign1.value);
@@ -165,8 +158,6 @@ function compute(){
     var s7=assign7.value==""?0:parseInt(assign7.value);
     
     var sum=0;
-
-    var exam=examMark.value==""?0:parseInt(examMark.value);
 
     sum=s1*s1W + s2*s2W + s3*s3W + s4*s4W + s5*s5W + s6*s6W + s7*s7W; //computer final mark
 
@@ -194,8 +185,6 @@ function createEvents(){
      assign5.addEventListener("change",compute,false);
     assign6.addEventListener("change",compute,false);
     assign7.addEventListener("change",compute,false);
-    
-    examMark.addEventListener("change",compute,false);
 }
 </script>
 </body>
