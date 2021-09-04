@@ -3,10 +3,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
    #AllContainer {
-  max-width: 600px;
+  max-width: 650px;
   margin: auto;
        background-color: beige;
-        }
+       border: 1p solid black;
+ }
 
 input {
   border: 1px solid black;
@@ -43,8 +44,8 @@ input:out-of-range + label::after {
     }
     #content{
         background-color: #F4C430;
-        padding:2px;
-        margin:2px;
+        padding:5px;
+        margin:5px;
     }
     #distinictionMark{
      color:darkred;
@@ -88,7 +89,7 @@ input:out-of-range + label::after {
 <h1 style='background-color:#FF8200; color: black'>ICT1512 Pass Mark Calculator</h1>
 <div style="border:1 black thin; font-size: 1.2em">
 <p>ICT15M1 is a non-venue based continuous assessment module. Your year mark contributes 100% towards your final mark and you need to obtain a subminimum of 50% in order to pass:<br/>
-[Assignment 1 * 0.16] + [Assignment 2 * 0.17] + [Assignment 3 * 0.17] + [Assignment 4 * 0.5] = Year  
+[Ass1 * 0.07] + [Ass2 * 0.10] +[Ass3 * 0.07] + [Ass4 * 0.10]+[Ass5 * 0.06] + [Ass6 * 0.10]+[Ass7 * 0.5] = Final Mark
   
   <br/>
 <em>All seven (7) of the assignment results contributes towards your year mark, which in turn is your final mark.</em>
@@ -96,7 +97,8 @@ input:out-of-range + label::after {
 </div>
 <div id="content">
 <form>
-<p> All marks (input) is supposed to be percentages you got in assignments.<br/> Enter Marks</p>
+<p> All marks are supposed to be entered as a percentage you got in your assignments.<br/>
+    Enter Marks</p>
 <label for="assign1"> Assignment 1 (7%) - MCQ:
     <input type="number" name="assign1" id="assign1" size="30" min="0" max="100"  value="0" onchange="compute()"/>
 </label>
