@@ -174,25 +174,17 @@ function compute(){
     yearkMark.innerHTML="Your FINAL Mark : <em class='emphasis'>"+ sum.toFixed(0) +"%</em>"; //display final mark
     
     //check for distinction
-    var distcheck=distinctionCheck(sum);
      
-     if(distcheck>=75){
+     if(sum>=75){
     //to pass you need a distinction you need x% in the exam.
     document.getElementById("distinictionMark").innerHTML= "CONGRATUTIONS YOU PASSED WITH A DISTINCTION!!!.";
     }
-    else if(distcheck>=50 && distcheck<75){
+    else if(sum>=50 && sum<75){
         document.getElementById("distinictionMark").innerHTML= "CONGRATUTIONS YOU PASSED THE MODULE!!!."; 
     }
     else{
          document.getElementById("distinictionMark").innerHTML= "FAILED REPEAT THE MODULE!!!."; 
     }
-}
-function distinctionCheck(mark){
-    if(mark>=75){
-        return mark;
-    }
-    else
-        return mark;
 }
 function createEvents(){
     assign1.addEventListener("change",compute,false);
