@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Assessment Marks Calculator</title>
+</head>
+<style>
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  border: 1px solid #ff7755;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ff7755;
+}
+
+th {
+  background-color: #ff7755;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+input[type="number"] {
+  width: 60px;
+  padding: 4px;
+}
+.result{
+padding: 4px;
+width: 100%;
+font-size:1.5em;
+}
+
+</style>
+<body>
+  <h1>ICT1512 Assessment Marks Calculator - 2023</h1>
+
+  <form id="marksForm">
+  <div id="resultTop" class="result"></div>
+    <table>
+      <tr>
+        <th>Assessment</th>
+        <th>Assessment Format</th>
+        <th>Weight</th>
+        <th>Mark</th>
+      </tr>
+      <tr>
+        <td>Assessment 1</td>
+        <td>Quiz</td>
+        <td>3%</td>
+        <td><input type="number" id="mark1" min="0" max="100" value="0"></td>
+      </tr>
+      <tr>
+        <td>Assessment 2</td>
+        <td>Blog</td>
+        <td>3%</td>
+        <td><input type="number" id="mark2" min="0" max="100" value="0"></td>
+      </tr>
+      <tr>
+        <td>Assessment 3</td>
+        <td>Practical</td>
+        <td>10%</td>
+        <td><input type="number" id="mark3" min="0" max="100" value="0"></td>
+      </tr>
+      <tr>
+        <td>Assessment 4</td>
+		<td>Progress report</td>
+        <td>2%</td>
+        <td><input type="number" id="mark4" min="0" max="100"  value="0"></td>
+      </tr>
+	   <tr>
+        <td>Assessment 5</td>
+		<td>Quiz</td>
+        <td>3%</td>
+        <td><input type="number" id="mark5" min="0" max="100"  value="0"></td>
+      </tr>
+      <tr>
+        <td>Assessment 6</td>
+		<td>Blog</td>
+        <td>3%</td>
+        <td><input type="number" id="mark6" min="0" max="100"  value="0"></td>
+      </tr>
+	   <tr>
+        <td>Assessment 7</td>
+		<td>Practical</td>
+        <td>10%</td>
+        <td><input type="number" id="mark7" min="0" max="100"  value="0"></td>
+      </tr>
+      <tr>
+        <td>Assessment 8</td>
+		<td>Progress report</td>
+        <td>2%</td>
+        <td><input type="number" id="mark8" min="0" max="100"  value="0"></td>
+      </tr>
+	   <tr>
+        <td>Assessment 9</td>
+		<td>Quiz</td>
+        <td>3%</td>
+        <td><input type="number" id="mark9" min="0" max="100"  value="0"></td>
+      </tr>
+      <tr>
+        <td>Assessment 10</td>
+		<td>Blog</td>
+        <td>3%</td>
+        <td><input type="number" id="mark10" min="0" max="100"  value="0"></td>
+      </tr>
+	   <tr>
+        <td>Assessment 11</td>
+		<td>Practical</td>
+        <td>10%</td>
+        <td><input type="number" id="mark11" min="0" max="100"  value="0"></td>
+      </tr>
+      <tr>
+        <td>Assessment 12</td>
+		<td>Progress report</td>
+        <td>2%</td>
+        <td><input type="number" id="mark12" min="0" max="100"  value="0"></td>
+      </tr>
+	   <tr>
+        <td>Assessment 13</td>
+		<td>Quiz</td>
+        <td>3%</td>
+        <td><input type="number" id="mark13" min="0" max="100"  value="0"></td>
+      </tr>
+      <tr>
+        <td>Assessment 14</td>
+		<td>Blog</td>
+        <td>3%</td>
+        <td><input type="number" id="mark14" min="0" max="100"  value="0"></td>
+      </tr>
+	   <tr>
+        <td>Assessment 15</td>
+		<td>Practical</td>
+        <td>10%</td>
+        <td><input type="number" id="mark15" min="0" max="100"  value="0"></td>
+      </tr>
+      <tr>
+        <td>Assessment 16</td>
+		<td>Practical</td>
+        <td>30%</td>
+        <td><input type="number" id="mark16" min="0" max="100"  value="0"></td>
+      </tr>
+      <!-- Add remaining assessments with their weights and input fields -->
+    </table>
+    <br>
+    <button type="button" onclick="calculatePercentage()">Calculate</button>
+  </form>
+
+  <div id="result"></div>
+
+  <script src="script.js" async></script>
+</body>
+</html>
