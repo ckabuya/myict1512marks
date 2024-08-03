@@ -21,7 +21,7 @@ function calculatePercentage() {
   const totalWeight = 100;/* add weights of other assessments */;
 
   // Calculate current percentage
-  const currentPercentage = ((mark1 * 3) + (mark2 * 3) + (mark3 * 10) + (mark4 * 2) + (mark5 * 3) + (mark6 * 3) + (mark7 * 10)+ (mark8 * 2) + (mark9 * 3) + (mark10 * 3)+ (mark11 * 10) + (mark12 * 2) + (mark13 * 3)+ (mark14 * 3) + (mark15 * 10) + (mark16* 30))/ totalWeight;
+  const currentPercentage = ((mark1 * 3) + (mark2 * 5) + (mark3 * 8) + (mark4 * 2) + (mark5 * 3) + (mark6 * 5) + (mark7 * 8)+ (mark8 * 2) + (mark9 * 3) + (mark10 * 5)+ (mark11 * 8) + (mark12 * 2) + (mark13 * 3)+ (mark14 * 5) + (mark15 * 8) + (mark16* 30))/ totalWeight;
 
   // Display current percentage
   const result = document.getElementById("result");
